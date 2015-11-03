@@ -2,7 +2,7 @@ language: java
 
 jdk:
    - openjdk7
-   - oraclejdk7
+   #- oraclejdk7
   # - openjdk6
   # - oraclejdk8
    
@@ -20,5 +20,5 @@ notifications:
       
 archive: true
 
-#cache: true
+cache: true
 
