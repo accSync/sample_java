@@ -16,7 +16,9 @@ after_success:
    
 notifications:
    email:
-      varsha@shippable.com
+      recipients:
+         test12.ci34@gmail.com
+         varsha@shippable.com
       
 archive: true
 
