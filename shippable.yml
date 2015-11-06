@@ -8,7 +8,7 @@ jdk:
   
 before_install: 
    - shippable_retry 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi' 
-   - npm install
+  # - npm install
    
 before_script:
    - mkdir -p shippable/testresults
