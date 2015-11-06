@@ -5,6 +5,10 @@ jdk:
    - oraclejdk7
   # - openjdk6
   # - oraclejdk8
+  
+ before_install: 
+   - shippable_retry 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi'
+   - npm install
    
 before_script:
    - mkdir -p shippable/testresults
