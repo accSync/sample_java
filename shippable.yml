@@ -3,12 +3,17 @@ language: java
 jdk:
    - openjdk7
    - oraclejdk7
-  # - openjdk6
-  # - oraclejdk8
+   - openjdk6
+   - oraclejdk8
+   
+matrix:
+  allow_failures:
+    - jdk: oraclejdk8
+   exclude:
+    - jdk: openjdk6
   
 before_install: 
    - shippable_retry 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi' 
-  # - npm install
    
 before_script:
    - mkdir -p shippable/testresults
