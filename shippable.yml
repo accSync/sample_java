@@ -7,7 +7,7 @@ jdk:
    - oraclejdk8
    
 matrix:
-  allow_failures:
+   allow_failures:
     - jdk: oraclejdk8
    exclude:
     - jdk: openjdk6
@@ -20,8 +20,8 @@ before_script:
    - mkdir -p shippable/codecovarage
 
 after_success:
-   - mvn clean cobertura:cobertura
-   - mvn test
+ #  - mvn clean cobertura:cobertura
+  # - mvn test
    
 notifications:
    email:
